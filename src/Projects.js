@@ -5,8 +5,8 @@ import ProjectCard from './ProjectCard.js'
 const Projects = (_, ref) => {
     return (
         <div ref={ref} className="projects" id="projects">
-            hi
             {/* <ProjectCard /> */}
+            <ProjectCard title="hi"/>
         </div>
     )
 }

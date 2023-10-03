@@ -1,1 +1,17 @@
+:root{
+    --bg-color: #fffffa;
+    --text-color: #354f52;
+    --switch-color: #496B6F;
+    --header-color: #fffffa;
+    --header-line-color: rgba(6,8,8,0.5);
+    --text-hover-color: #d2bba0;
+}
 
+.dark-mode{
+    --bg-color: #354f52;
+    --text-color: #fffffa;
+    --switch-color: #496B6F;
+    --header-color: #354f52;
+    --header-line-color: rgba(150, 150, 150, 0.5);
+    --text-hover-color: #231f1a;
+}

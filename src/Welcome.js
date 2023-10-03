@@ -8,7 +8,8 @@ const Welcome = (_, ref) => {
                 I'm Richard
             </h1>
             <h1 className="name_2">
-                a senior at the University of California Santa Barbara curious about data, especially the big ones. 
+                a graduate from the University of California Santa Barbara interested in
+                the intersection of distributed computing and machine learning. 
             </h1>
         </div>
     )

@@ -2,6 +2,7 @@ import {ReactComponent as Envelope} from "./svg/envelope.svg"
 import {ReactComponent as Github} from "./svg/github.svg"
 import {ReactComponent as LinkedIn} from "./svg/linkedin.svg"
 import "./Header.css"
+import ThemeSwitch from "./ThemeSwitch"
 
 const Header = ({refs}) => {
     return (
@@ -9,15 +10,13 @@ const Header = ({refs}) => {
 			<div className="logo fade_in">
 				<h4><a href="index.html">richard yang</a></h4>
 			</div>
-			<nav>
-				<div>
-					<ul className="nav_links fade_in">
-						<li onClick={() => {refs[0].current?.scrollIntoView({behavior:'smooth'})}}>Home</li>
-						<li onClick={() => {refs[1].current?.scrollIntoView({behavior:'smooth'})}}>About</li>
-						<li onClick={() => {refs[2].current?.scrollIntoView({behavior:'smooth'})}}>Projects</li>
-					</ul>
-				</div>
-			</nav>
+			<div>
+				<ul className="nav_links fade_in">
+					<li onClick={() => {refs[0].current?.scrollIntoView({behavior:'smooth'})}}>Home</li>
+					<li onClick={() => {refs[1].current?.scrollIntoView({behavior:'smooth'})}}>About</li>
+					<li onClick={() => {refs[2].current?.scrollIntoView({behavior:'smooth'})}}>Projects</li>
+				</ul>
+			</div>
 			<div>
 				<ul className="nav_icons">
 					<li className="icon">
@@ -34,6 +33,9 @@ const Header = ({refs}) => {
 						<a href="mailto:email@example.com" className="icon_link">
 							<Envelope />
 						</a>
+					</li>
+					<li className="icon">
+						<ThemeSwitch/>
 					</li>
 				</ul>
 			</div>

@@ -1,6 +1,7 @@
 footer{
-	background:#e3eeff;
+	background:var(--bg-color);
 	scroll-snap-align: start;
+	transition: all 1s ease 0s;
 }
 
 #footer_icons{
@@ -13,7 +14,7 @@ footer{
 #footer_text{
 	font-family: "Montserrat", sans-serif;
 	font-size: 12px;
-	color: #7BC8F6;
+	color: var(--text-color);
 	display:flex;
 	align-content: center;
 	justify-content: center;
