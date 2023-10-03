@@ -8,7 +8,7 @@ window.onload = function(){
 	document.body.className += "loaded";
 }
 
-var prevScrollPos = window.pageYOffset;
+var prevScrollPos = window.scrollY;
 
 window.addEventListener('scroll', throttle(navbarVis, 100));
 
@@ -37,7 +37,7 @@ function navbarVis(){
 }
 
 function navbarTop(){
-	var currScrollPos = window.pageYOffset;
+	var currScrollPos = window.scrollY;
 	var nb = document.getElementById("navbar");
 	if(currScrollPos === 0){
 		nb.classList.remove("notNavTop");
@@ -46,7 +46,6 @@ function navbarTop(){
 	}
 	prevScrollPos = currScrollPos;
 }
-
 
 const App = () => {
 
