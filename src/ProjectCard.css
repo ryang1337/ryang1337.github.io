@@ -1,0 +1,79 @@
+.clickableCard{
+    text-decoration:none;
+    cursor:pointer;
+    transition: all 0.3s;
+    transform: translateY(0%);
+}
+
+.clickableCard:hover{
+    transform: translateY(-5%);
+}
+
+.projectCardContainer{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    width:60vw;
+    padding-top: 1rem;
+}
+
+.projectCard{
+    transition: all 0.3s ease 0s;
+	font-family: "Poppins", sans-serif;
+	color: var(--text-color);
+	display:flex;
+	font-weight: 500;
+	font-style: normal;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.projectCardTitle{
+    display:flex;
+    flex-direction:column;
+    width:50%;
+    font-weight:700;
+}
+
+.cardMain{
+    display:flex;
+    flex-direction: row;
+    align-items:baseline;
+    margin-bottom: 0.2rem;
+}
+
+.cardTitle{
+    font-size: 2rem;
+}
+
+.cardDate{
+    font-weight: 300;
+    font-size: 0.6rem;
+    padding-left:0.8rem;
+}
+
+.tags{
+    list-style:none;
+    font-size: 0.8rem;
+    font-weight: 300;
+    display:flex;
+    flex-direction: row;
+}
+
+.tagItem{
+    background: var(--text-highlight-color);
+    border-radius: 0.3rem;
+    padding: 0 0.4rem;
+    margin-right: 0.5rem;
+}
+
+.projectCardDescription{
+    font-size: 0.8rem;
+    font-weight: 300;
+    width:50%;
+    padding-top:0.5rem;
+}
+
+.projectThumbnail{
+	justify-content: center;
+}

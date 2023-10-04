@@ -1,6 +1,6 @@
-import {ReactComponent as Envelope} from "./svg/envelope.svg"
-import {ReactComponent as Github} from "./svg/github.svg"
-import {ReactComponent as LinkedIn} from "./svg/linkedin.svg"
+import {ReactComponent as Envelope} from "./assets/svg/envelope.svg"
+import {ReactComponent as Github} from "./assets/svg/github.svg"
+import {ReactComponent as LinkedIn} from "./assets/svg/linkedin.svg"
 import "./Footer.css"
 
 const Footer = () => {
@@ -26,7 +26,7 @@ const Footer = () => {
 			</ul>
 		</div>
 		<div id = "footer_text">
-			&copy; 2022 Richard Yang. | richard.ruoyu.yang@gmail.com
+			&copy; 2023 Richard Yang. | richard.ruoyu.yang@gmail.com
 		</div>
 	</footer>
     )

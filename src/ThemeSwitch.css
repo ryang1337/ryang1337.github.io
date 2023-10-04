@@ -5,19 +5,8 @@
   -webkit-tap-highlight-color: transparent;
 }
 
-.theme__fill,
 .theme__icon {
   transition: 0.3s;
-}
-
-.theme__fill {
-  background-color: var(--bg);
-  display: block;
-  mix-blend-mode: difference;
-  position: fixed;
-  inset: 0;
-  height: 100%;
-  transform: translateX(-100%);
 }
 
 .theme__icon,
@@ -141,10 +130,6 @@
 
 .theme__toggle:checked:before {
   background-color: var(--text-color);
-}
-
-.theme__toggle:checked ~ .theme__fill {
-  transform: translateX(0);
 }
 
 .theme__toggle:checked ~ .theme__icon .theme__icon-part:nth-child(1) {

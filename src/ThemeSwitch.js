@@ -2,37 +2,38 @@ import "./ThemeSwitch.css"
 import {useEffect} from "react"
 
 function switchTheme(e) {
-    var element = document.body;
-    console.log("hello");
-    if (e.target.checked) {
-        element.classList.add('dark-mode');
-    }
-    else {
-        element.classList.remove('dark-mode');
-    }    
 }
     
-const ThemeSwitch = () => {
+const ThemeSwitch = ({setLightMode}) => {
     useEffect(() => {
         const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
-        toggleSwitch.addEventListener('change', switchTheme, false);
+        toggleSwitch.addEventListener('change', (e) => {
+            var element = document.body;
+            if (e.target.checked) {
+                element.classList.add('dark-mode');
+                setLightMode(false);
+            }
+            else {
+                element.classList.remove('dark-mode');
+                setLightMode(true);
+            }    
+        });
     }, [])
 
     return(
-        <label for="theme" class="theme">
-            <span class="theme-switch">
-                <input id="theme" class="theme__toggle" type="checkbox" role="switch" name="theme" value="dark"/>
-                <span class="theme__fill"></span>
-                <span class="theme__icon">
-                    <span class="theme__icon-part"></span>
-                    <span class="theme__icon-part"></span>
-                    <span class="theme__icon-part"></span>
-                    <span class="theme__icon-part"></span>
-                    <span class="theme__icon-part"></span>
-                    <span class="theme__icon-part"></span>
-                    <span class="theme__icon-part"></span>
-                    <span class="theme__icon-part"></span>
-                    <span class="theme__icon-part"></span>
+        <label htmlFor="theme" className="theme">
+            <span className="theme-switch">
+                <input id="theme" className="theme__toggle" type="checkbox" role="switch" name="theme" value="dark"/>
+                <span className="theme__icon">
+                    <span className="theme__icon-part"></span>
+                    <span className="theme__icon-part"></span>
+                    <span className="theme__icon-part"></span>
+                    <span className="theme__icon-part"></span>
+                    <span className="theme__icon-part"></span>
+                    <span className="theme__icon-part"></span>
+                    <span className="theme__icon-part"></span>
+                    <span className="theme__icon-part"></span>
+                    <span className="theme__icon-part"></span>
                 </span>
             </span>
         </label>

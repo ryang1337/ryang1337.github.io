@@ -2,7 +2,7 @@ import './App.css';
 import Header from './Header.js'
 import Main from './Main.js'
 import Footer from './Footer'
-import {useEffect, createRef} from "react"
+import {useState, useEffect, createRef} from "react"
 
 window.onload = function(){
 	document.body.className += "loaded";
@@ -53,6 +53,8 @@ const App = () => {
 		window.history.scrollRestoration = 'manual'
 	}, []);
 
+	const [lightMode, setLightMode] = useState(true);
+
 	const sections = ['Welcome', 'About', 'Projects'];
 	const sectionIds = [...Array(sections.length).keys()];
 
@@ -64,8 +66,8 @@ const App = () => {
 
 	return (
 		<div className="app">
-			<Header refs={refs}/>
-			<Main refs={refs}/>
+			<Header refs={refs} setLightMode={setLightMode}/>
+			<Main refs={refs} lightMode={lightMode}/>
 			<Footer />
 		</div>
 	);

@@ -1,10 +1,10 @@
-import {ReactComponent as Envelope} from "./svg/envelope.svg"
-import {ReactComponent as Github} from "./svg/github.svg"
-import {ReactComponent as LinkedIn} from "./svg/linkedin.svg"
+import {ReactComponent as Envelope} from "./assets/svg/envelope.svg"
+import {ReactComponent as Github} from "./assets/svg/github.svg"
+import {ReactComponent as LinkedIn} from "./assets/svg/linkedin.svg"
 import "./Header.css"
 import ThemeSwitch from "./ThemeSwitch"
 
-const Header = ({refs}) => {
+const Header = ({refs, setLightMode}) => {
     return (
         <header id = "navbar">
 			<div className="logo fade_in">
@@ -35,7 +35,7 @@ const Header = ({refs}) => {
 						</a>
 					</li>
 					<li className="icon">
-						<ThemeSwitch/>
+						<ThemeSwitch setLightMode={setLightMode}/>
 					</li>
 				</ul>
 			</div>

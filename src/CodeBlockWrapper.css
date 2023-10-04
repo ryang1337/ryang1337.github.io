@@ -1,0 +1,52 @@
+/* The browser window */
+.container {
+    border: 0.2rem solid var(--text-highlight-color);
+    border-radius: 0.5rem;
+}
+  
+  /* Container for columns and the top "toolbar" */
+.row {
+    padding: 0.1rem;
+    padding-left:0.3rem;
+    background: var(--text-highlight-color);
+}
+  
+.left {
+    width: 15%;
+}
+  
+  /* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+  
+  /* Three dots */
+.dot {
+    margin-right: 0.25rem;
+    height: 0.5rem;
+    width: 0.5rem;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.d1{
+    background-color: #ed594a;
+}
+
+.d2{
+    background-color: #fdd800;
+}
+
+.d3{
+    background-color: #5ac05a;
+}
+
+.codeBlock{
+    font-family: "Fira Code";
+    font-size:0.8rem;
+    background: var(--text-highlight-color);
+    border:0.1rem solid var(--text-highlight-color);
+    border-radius: 0.5rem;
+}

@@ -12,6 +12,7 @@ footer{
 }
 
 #footer_text{
+	transition: all 0.3s ease 0s;
 	font-family: "Montserrat", sans-serif;
 	font-size: 12px;
 	color: var(--text-color);
