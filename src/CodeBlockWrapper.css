@@ -45,7 +45,7 @@
 
 .codeBlock{
     font-family: "Fira Code";
-    font-size:0.8rem;
+    font-size:0.6rem;
     background: var(--text-highlight-color);
     border:0.1rem solid var(--text-highlight-color);
     border-radius: 0.5rem;

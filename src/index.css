@@ -6,7 +6,8 @@
     --switch-color: #496B6F;
     --header-color: #ffffff;
     --header-line-color: rgba(6,8,8,0.5);
-    --text-hover-color: #d2bba0;
+    /* --text-hover-color: #d2bba0; */
+    --text-hover-color: #b8b8b8;
 }
 
 .dark-mode{
@@ -15,7 +16,7 @@
     --text-color: #ffffff;
     --text-highlight-color: #182425;
     --switch-color: #496B6F;
-    --header-color: #24272d;
+    --header-color: #282c34;
     --header-line-color: rgba(150, 150, 150, 0.5);
-    --text-hover-color: #231f1a;
+    --text-hover-color: #626B7F;
 }

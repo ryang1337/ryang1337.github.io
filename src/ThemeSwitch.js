@@ -1,8 +1,5 @@
 import "./ThemeSwitch.css"
 import {useEffect} from "react"
-
-function switchTheme(e) {
-}
     
 const ThemeSwitch = ({setLightMode}) => {
     useEffect(() => {

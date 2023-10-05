@@ -2,12 +2,32 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
+import RouteErrorPage from './RouteErrorPage.js'
+import ProjectPage, { loader as projectPageLoader } from './ProjectPage.js'
+import ProjectTagPage, { loader as projectTagPageLoader } from './ProjectTagPage.js'
+import { createBrowserRouter, RouterProvider, } from 'react-router-dom';
 // import reportWebVitals from './reportWebVitals';
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App/>,
+    errorElement: <RouteErrorPage/>
+  },{
+    path: "/projects/:projectTitle",
+    element: <ProjectPage />,
+    loader: projectPageLoader
+  },{
+    path: "/projects",
+    element: <ProjectTagPage />,
+    loader: projectTagPageLoader
+  }
+])
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router}/>
   </React.StrictMode>
 );
 

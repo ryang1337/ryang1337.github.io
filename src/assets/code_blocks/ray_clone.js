@@ -1,15 +1,15 @@
 const RayCloneCode =
 `#include <rayclone.h>
 
-int longRunning(int n){
+int reallySlowFunction(int n){
     return n;
 }
-REGISTER_REMOTE(longRunning)
+REGISTER_REMOTE(reallySlowFunction)
 
 int main(){
     std::vector<rayclone::ObjectRef<int>> vals;
     for(int i = 0; i < 10; i++){
-        vals.push_back(rayclone::Task(longRunning).Remote(i));
+        vals.push_back(rayclone::Task(reallySlowFunction).Remote(i));
     }
     for(auto res : vals){
         std::cout << rayclone::Get(res) << "\\n";

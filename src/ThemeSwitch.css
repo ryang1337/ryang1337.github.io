@@ -44,7 +44,7 @@
   background-color: hsl(0,0%,100%);
   border-radius: 0.05em;
   top: 50%;
-  left: calc(50% - 0.025em);
+  left: calc(50% - 0.04em);
   transform: rotate(0deg) translateY(0.25em);
   transform-origin: 50% 0;
   width: 0.05em;
@@ -123,9 +123,11 @@
   background-color: var(--switch-color);
 }
 
-.theme__toggle:checked:before,
-.theme__toggle:checked ~ .theme__icon {
+.theme__toggle:checked:before{
   transform: translateX(1.5em);
+}
+.theme__toggle:checked ~ .theme__icon {
+  transform: translateX(1.2em);
 }
 
 .theme__toggle:checked:before {
@@ -136,7 +138,7 @@
   box-shadow: 0.1em -0.1em 0 0.1em var(--bg-color) inset;
   transform: scale(1);
   top: 0.1em;
-  left: -0.1em;
+  left: 0.175em;
 }
 
 .theme__toggle:checked ~ .theme__icon .theme__icon-part ~ .theme__icon-part {
