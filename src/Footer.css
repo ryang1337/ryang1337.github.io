@@ -1,7 +1,7 @@
 footer{
 	background:var(--bg-color);
 	scroll-snap-align: start;
-	transition: all 1s ease 0s;
+	transition: all var(--transition-speed) ease 0s;
 }
 
 #footer_icons{
@@ -12,7 +12,7 @@ footer{
 }
 
 #footer_text{
-	transition: all 0.3s ease 0s;
+	transition: all var(--transition-speed) ease 0s;
 	font-family: "Poppins", sans-serif;
 	font-size: 12px;
 	color: var(--text-color);

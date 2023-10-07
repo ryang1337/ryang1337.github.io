@@ -1,31 +1,54 @@
-.clickableCard{
-    text-decoration:none;
-    cursor:pointer;
-    transition: all 0.3s;
-    transform: translateY(0%);
+.project_card_svg path{
+	transition: all var(--transition-speed) ease 0s;
+	fill:var(--text-color);
 }
 
+.project_card_svg{
+	transition: all 0.2s ease 0s;
+    position:relative;
+    width: 1.7rem;
+    transform: translateX(0%) translateY(0%);
+}
+
+.clickableCard{
+	transition: all var(--transition-speed) ease 0s;
+    text-decoration:none;
+    cursor:pointer;
+    padding:0.4rem 0.8rem 0.8rem 0.8rem;
+    border-radius:5px;
+    border-top: 0.5px solid var(--bg-color);
+}
+
+.clickableCard:hover .project_card_svg{
+    transform: translateX(20%) translateY(-20%);
+}
 .clickableCard:hover{
-    transform: translateY(-5%);
+    background-color: var(--project-card-highlight-color);
+    border-top: 0.5px solid var(--project-card-outline-color);
+}
+.clickableCard:hover .tagItem{
+    border: 0.1px solid var(--project-card-highlight-color);
+}
+.clickableCard:hover .tagItem:hover{
+    border: 0.1px solid var(--text-color);
 }
 
 .projectCardContainer{
     display: flex;
     flex-direction:column;
     align-items: center;
-    width:50vw;
+    width:52vw;
     padding-top: 2rem;
 }
 
 .projectCard{
-    transition: all 0.3s ease 0s;
+	transition: all var(--transition-speed) ease 0s;
 	font-family: "Poppins", sans-serif;
 	color: var(--text-color);
 	display:flex;
 	font-weight: 500;
 	font-style: normal;
     justify-content: space-between;
-    margin-bottom: 2rem;
 }
 
 .projectCardTitle{
@@ -38,7 +61,7 @@
 .cardMain{
     display:flex;
     flex-direction: row;
-    align-items:baseline;
+    align-items:flex-end;
     margin-bottom: 0.2rem;
 }
 
@@ -46,15 +69,11 @@
     font-size: 2rem;
 }
 
-.cardDate{
-    font-weight: 300;
-    font-size: 0.6rem;
-    padding-left:0.8rem;
+.outLink{
+    padding-left:0.2rem;
 }
 
 .tags{
-	transition: all 0.3s ease 0s;
-    list-style:none;
     font-size: 0.8rem;
     font-weight: 300;
     display:flex;
@@ -62,11 +81,14 @@
 }
 
 .tagItem{
-	transition: all 0.3s ease 0s;
+    text-decoration:none;
+    color: var(--text-color);
+	transition: all var(--transition-speed) ease 0s;
     background: var(--text-highlight-color);
     border-radius: 0.3rem;
     padding: 0 0.4rem;
     margin-right: 0.5rem;
+    border: 0.1px solid var(--bg-color);
 }
 
 .projectCardDescription{
@@ -78,4 +100,5 @@
 
 .projectThumbnail{
 	justify-content: center;
+    margin-top: 1.5rem;
 }

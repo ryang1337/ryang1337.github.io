@@ -1,7 +1,11 @@
 import "./CodeBlockWrapper.css"
 import { CodeBlock } from "react-code-blocks"
+import { atomOneDark, a11yLight} from "react-code-blocks"
+import { useSelector } from "react-redux"
 
-const CodeBlockWrapper = ({text, language, showLineNumbers, theme}) => {
+const CodeBlockWrapper = ({ text, language, showLineNumbers }) => {
+    const darkMode = useSelector((state) => state.darkMode.value)
+
     return (
         <div className="container">
             <div className="row">
@@ -17,7 +21,7 @@ const CodeBlockWrapper = ({text, language, showLineNumbers, theme}) => {
                     text={text}
                     language={language}
                     showLineNumbers={showLineNumbers}
-                    theme={theme}
+                    theme={darkMode ? atomOneDark : a11yLight}
                 />
             </div>
         </div>

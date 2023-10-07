@@ -1,11 +1,12 @@
 import './App.css';
 import Header from './Header.js'
-import Main from './Main.js'
 import Footer from './Footer'
 import {useState, useEffect, createRef} from "react"
+import { Outlet } from "react-router-dom"
+import { useSelector } from 'react-redux';
 
 window.onload = function(){
-	document.body.className += "loaded";
+	document.body.classList.add("loaded");
 }
 
 var prevScrollPos = window.scrollY;
@@ -53,21 +54,26 @@ const App = () => {
 		window.history.scrollRestoration = 'manual'
 	}, []);
 
-	const [lightMode, setLightMode] = useState(true);
-
 	const sections = ['Welcome', 'About', 'Projects'];
 	const sectionIds = [...Array(sections.length).keys()];
+
+	const darkMode = useSelector((state) => state.darkMode.value)
+
+	if(darkMode){
+		document.body.classList.add('dark-mode')
+	}else{
+		document.body.classList.remove('dark-mode')
+	}
 
 	const refs = sectionIds.reduce((acc, value) => {
 		acc[value] = createRef();
 		return acc;
 	}, {});
-	console.log(refs);
 
 	return (
 		<div className="app">
-			<Header refs={refs} setLightMode={setLightMode}/>
-			<Main refs={refs} lightMode={lightMode}/>
+			<Header refs={refs}/>
+			<Outlet context={[refs]}/>
 			<Footer />
 		</div>
 	);

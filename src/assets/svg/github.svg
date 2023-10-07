@@ -3,7 +3,7 @@
     focusable="false"
     data-prefix="fab"
     data-icon="github"
-    class="github_svg fade_in"
+    class="header_svg github_svg fade_in"
     role="img"
     xmlns="http://www.w3.org/2000/svg"
     height="25"

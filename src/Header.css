@@ -23,8 +23,8 @@ nav{
 	top:0;
 	width:100%;
 	opacity: 1;
-	transition: all 0.9s;
 	z-index: 1;
+	transition: all var(--transition-speed) ease 0s;
 }
 
 #navbar.notNavTop{
@@ -55,28 +55,29 @@ nav{
 	padding: 0px 1rem;
 }
 
-.nav_links li{
-	transition: all 0.3s ease 0s;
+.nav_link{
+	transition: all var(--transition-speed) ease 0s;
 }
 
-.nav_links li:hover{
-	color: var(--text-hover-color);
+.nav_link:hover{
+	color:var(--text-hover-color);
 }
 
-svg path{
-	transition: all 0.3s ease 0s;
+.header_svg path{
+	transition: all var(--transition-speed) ease 0s;
 	fill:var(--text-color);
 }
 
-svg:hover path{
+.header_svg:hover path{
 	fill:var(--text-hover-color);
 }
 
 .logo h4 a{
-	transition: all 0.3s ease 0s;
+	transition: all var(--transition-speed) ease 0s;
 }
 
 .logo h4 a:hover{
+	transition: color 0.3s ease 0s;
 	color:var(--text-hover-color);
 }
 

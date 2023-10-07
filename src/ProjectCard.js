@@ -1,12 +1,20 @@
 import "./ProjectCard.css"
-import { atomOneDark, a11yLight} from "react-code-blocks"
-import RayCloneCode from "./assets/code_blocks/ray_clone.js"
 import CodeBlockWrapper from "./CodeBlockWrapper"
+import Tags from "./Tags.js"
 import { Link } from "react-router-dom"
+import {ReactComponent as Arrow} from "./assets/svg/up-right-arrow.svg"
+import { ProjectTitleMap } from "./ProjectMap.js"
+import { useSelector } from 'react-redux'
 
-const ProjectCard = ({title, desc, completeDate, tags, lightMode, isCodeBlock, image}) => {
-    const tagDisplay = tags.map((tag, i) => <li className="tagItem" key={i}>{tag}</li>);
+const ProjectCard = ({ title }) => {
     const queryTitle = title.replace(/\s/g,'-').toLowerCase()
+    const project = ProjectTitleMap[title]
+    const projectTitle = project.title
+    const desc = project.desc
+    const tags = project.tags
+    const hasCodeBlock = project.hasCodeBlock
+    const image = project.image
+    const codeBlockText = project.codeBlockText
 
     return (
             <div className="projectCardContainer">
@@ -15,15 +23,15 @@ const ProjectCard = ({title, desc, completeDate, tags, lightMode, isCodeBlock, i
                         <div className="projectCardTitle">
                             <div className="cardMain">
                                 <div className="cardTitle">
-                                    {title}
+                                    {projectTitle}
                                 </div>
-                                <div className="cardDate">
-                                    {completeDate}
+                                <div className="outLink">
+                                    <Arrow />
                                 </div>
                             </div>
-                            <ul className="tags">
-                                {tagDisplay}
-                            </ul>
+                            <div className="tags">
+                                <Tags tags={tags}/>
+                            </div>
                         </div>
                         <div className="projectCardDescription">
                             {desc}
@@ -31,13 +39,12 @@ const ProjectCard = ({title, desc, completeDate, tags, lightMode, isCodeBlock, i
                     </div>
                 </Link>
                 {
-                    isCodeBlock ? 
+                    hasCodeBlock ? 
                     <div className="projectThumbnail codeBlock">
                         <CodeBlockWrapper
-                            text={RayCloneCode}
+                            text={codeBlockText}
                             language="cpp"
                             showLineNumbers={true}
-                            theme={lightMode ? a11yLight : atomOneDark}
                         />
                     </div>
                     :

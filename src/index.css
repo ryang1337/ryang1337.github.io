@@ -1,17 +1,17 @@
 :root{
     --bg-color: #ffffff;
-    /* --text-color: #24272d; */
     --text-color: #282c34;
-    --text-highlight-color: #f0f0f0;
+    --text-highlight-color: #e8e8e8;
     --switch-color: #496B6F;
     --header-color: #ffffff;
     --header-line-color: rgba(6,8,8,0.5);
-    /* --text-hover-color: #d2bba0; */
     --text-hover-color: #b8b8b8;
+    --project-card-highlight-color: #f5f5f5;
+    --project-card-outline-color: #ebebeb;
+    --transition-speed: 0.3s;
 }
 
 .dark-mode{
-    /* --bg-color: #24272d; */
     --bg-color: #282c34;
     --text-color: #ffffff;
     --text-highlight-color: #182425;
@@ -19,4 +19,6 @@
     --header-color: #282c34;
     --header-line-color: rgba(150, 150, 150, 0.5);
     --text-hover-color: #626B7F;
+    --project-card-highlight-color: #31363f;
+    --project-card-outline-color: #646c7c;
 }

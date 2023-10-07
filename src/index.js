@@ -3,32 +3,47 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import RouteErrorPage from './RouteErrorPage.js'
+import HomePage from './HomePage.js'
 import ProjectPage, { loader as projectPageLoader } from './ProjectPage.js'
-import ProjectTagPage, { loader as projectTagPageLoader } from './ProjectTagPage.js'
+import ProjectTagPage from './ProjectTagPage.js'
+import AboutPage from './AboutPage.js'
 import { createBrowserRouter, RouterProvider, } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import store from './store'
 // import reportWebVitals from './reportWebVitals';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App/>,
-    errorElement: <RouteErrorPage/>
-  },{
-    path: "/projects/:projectTitle",
-    element: <ProjectPage />,
-    loader: projectPageLoader
-  },{
-    path: "/projects",
-    element: <ProjectTagPage />,
-    loader: projectTagPageLoader
+    errorElement: <RouteErrorPage />,
+    children: [
+      {
+        path: "/",
+        element: <HomePage />
+      },
+      {
+        path: "/projects/:projectTitle",
+        element: <ProjectPage />,
+        loader: projectPageLoader
+      },
+      {
+        path: "/projects",
+        element: <ProjectTagPage />,
+      },
+      {
+        path: "/about",
+        element: <AboutPage />,
+      }
+    ]
   }
 ])
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
+  <Provider store={store}>
     <RouterProvider router={router}/>
-  </React.StrictMode>
+  </Provider>
 );
 
 // If you want to start measuring performance in your app, pass a function

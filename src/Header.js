@@ -3,18 +3,25 @@ import {ReactComponent as Github} from "./assets/svg/github.svg"
 import {ReactComponent as LinkedIn} from "./assets/svg/linkedin.svg"
 import "./Header.css"
 import ThemeSwitch from "./ThemeSwitch"
+import { Link } from "react-router-dom"
 
-const Header = ({refs, setLightMode}) => {
+const Header = ({refs}) => {
     return (
         <header id = "navbar">
 			<div className="logo fade_in">
-				<h4><a href="index.html">richard yang</a></h4>
+				<h4><Link to="/">richard yang</Link></h4>
 			</div>
 			<div>
 				<ul className="nav_links fade_in">
-					<li onClick={() => {refs[0].current?.scrollIntoView({behavior:'smooth'})}}>Home</li>
-					<li onClick={() => {refs[1].current?.scrollIntoView({behavior:'smooth'})}}>About</li>
-					<li onClick={() => {refs[2].current?.scrollIntoView({behavior:'smooth'})}}>Projects</li>
+					<li onClick={() => {refs[0].current?.scrollIntoView({behavior:'smooth'})}}>
+						<Link to="/#home" className="nav_link">Home</Link>
+					</li>
+					<li onClick={() => {refs[1].current?.scrollIntoView({behavior:'smooth'})}}>
+						<Link to="/about" className="nav_link">About</Link>
+					</li>
+					<li onClick={() => {refs[2].current?.scrollIntoView({behavior:'smooth'})}}>
+						<Link to="/projects" className="nav_link">Projects</Link>
+					</li>
 				</ul>
 			</div>
 			<div>
@@ -35,7 +42,7 @@ const Header = ({refs, setLightMode}) => {
 						</a>
 					</li>
 					<li className="icon">
-						<ThemeSwitch setLightMode={setLightMode}/>
+						<ThemeSwitch />
 					</li>
 				</ul>
 			</div>

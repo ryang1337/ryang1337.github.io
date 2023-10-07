@@ -3,7 +3,7 @@
     focusable="false"
     data-prefix="far"
     data-icon="envelope"
-    class="envelope_svg fade_in"
+    className="header_svg envelope_svg fade_in"
     role="img"
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 -45 512 512">
