@@ -22,7 +22,7 @@ const ThemeSwitch = () => {
                 dispatch(setLightMode())
             }    
         });
-    },[])
+    },[dispatch])
 
     return(
         <label htmlFor="theme" className="theme">

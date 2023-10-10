@@ -2,6 +2,7 @@ footer{
 	background:var(--bg-color);
 	scroll-snap-align: start;
 	transition: all var(--transition-speed) ease 0s;
+	padding-top: 3rem;
 }
 
 #footer_icons{

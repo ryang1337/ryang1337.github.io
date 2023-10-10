@@ -5,7 +5,7 @@ import App from './App';
 import RouteErrorPage from './RouteErrorPage.js'
 import HomePage from './HomePage.js'
 import ProjectPage, { loader as projectPageLoader } from './ProjectPage.js'
-import ProjectTagPage from './ProjectTagPage.js'
+import ProjectTagPage, { loader as projectTagPageLoader } from './ProjectTagPage.js'
 import AboutPage from './AboutPage.js'
 import { createBrowserRouter, RouterProvider, } from 'react-router-dom';
 import { Provider } from 'react-redux';
@@ -25,11 +25,12 @@ const router = createBrowserRouter([
       {
         path: "/projects/:projectTitle",
         element: <ProjectPage />,
-        loader: projectPageLoader
+        loader: projectPageLoader,
       },
       {
         path: "/projects",
         element: <ProjectTagPage />,
+        loader: projectTagPageLoader,
       },
       {
         path: "/about",

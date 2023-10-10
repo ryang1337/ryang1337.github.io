@@ -1,9 +1,10 @@
 import './App.css';
 import Header from './Header.js'
 import Footer from './Footer'
-import {useState, useEffect, createRef} from "react"
+import {useEffect, createRef} from "react"
 import { Outlet } from "react-router-dom"
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { resetScrollTo } from './scrollToSlice';
 
 window.onload = function(){
 	document.body.classList.add("loaded");
@@ -26,7 +27,7 @@ function throttle(fn, wait) {
 }
 
 function navbarVis(){
-	var currScrollPos = window.pageYOffset;
+	var currScrollPos = window.scrollY;
 	var nb = document.getElementById("navbar");
 	if (prevScrollPos > currScrollPos) {
 		nb.classList.add("notNavTop");
@@ -49,31 +50,47 @@ function navbarTop(){
 }
 
 const App = () => {
-
-	useEffect(() => {
-		window.history.scrollRestoration = 'manual'
-	}, []);
-
-	const sections = ['Welcome', 'About', 'Projects'];
-	const sectionIds = [...Array(sections.length).keys()];
-
 	const darkMode = useSelector((state) => state.darkMode.value)
-
+	const scrollTo = useSelector((state) => state.scrollTo.value)
+	const dispatch = useDispatch()
 	if(darkMode){
 		document.body.classList.add('dark-mode')
 	}else{
 		document.body.classList.remove('dark-mode')
 	}
 
+	const sections = ['Welcome'];
+	const sectionIds = [...Array(sections.length).keys()];
 	const refs = sectionIds.reduce((acc, value) => {
 		acc[value] = createRef();
 		return acc;
 	}, {});
+	let refsMap = {}
+	sections.forEach((name, index) => {
+		refsMap[name] = refs[index]
+	})
+
+	const scrollToTarget = (ref) => {
+		ref.current?.scrollIntoView({
+			behavior: "smooth",
+		})
+	}
+
+	useEffect(() => {
+		if(scrollTo !== "") {
+			scrollToTarget(refsMap[scrollTo])
+			dispatch(resetScrollTo())
+		}
+	})
+
+	useEffect(() => {
+		window.history.scrollRestoration = 'manual'
+	}, [])
 
 	return (
 		<div className="app">
 			<Header refs={refs}/>
-			<Outlet context={[refs]}/>
+			<Outlet context={{refs}}/>
 			<Footer />
 		</div>
 	);

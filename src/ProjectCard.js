@@ -4,9 +4,8 @@ import Tags from "./Tags.js"
 import { Link } from "react-router-dom"
 import {ReactComponent as Arrow} from "./assets/svg/up-right-arrow.svg"
 import { ProjectTitleMap } from "./ProjectMap.js"
-import { useSelector } from 'react-redux'
 
-const ProjectCard = ({ title }) => {
+const ProjectCard = ({ title, showThumbnail }) => {
     const queryTitle = title.replace(/\s/g,'-').toLowerCase()
     const project = ProjectTitleMap[title]
     const projectTitle = project.title
@@ -18,7 +17,7 @@ const ProjectCard = ({ title }) => {
 
     return (
             <div className="projectCardContainer">
-                <Link className="clickableCard" to={`projects/${queryTitle}`}>
+                <Link className="clickableCard" to={`/projects/${queryTitle}`}>
                     <div className="projectCard">
                         <div className="projectCardTitle">
                             <div className="cardMain">
@@ -39,20 +38,21 @@ const ProjectCard = ({ title }) => {
                     </div>
                 </Link>
                 {
-                    hasCodeBlock ? 
-                    <div className="projectThumbnail codeBlock">
-                        <CodeBlockWrapper
-                            text={codeBlockText}
-                            language="cpp"
-                            showLineNumbers={true}
-                        />
-                    </div>
-                    :
-                    <div className="projectThumbnail">
-                        {image}
-                    </div>
+                    showThumbnail ? 
+                        (hasCodeBlock ? 
+                        <div className="projectThumbnail codeBlock">
+                            <CodeBlockWrapper
+                                text={codeBlockText}
+                                language="cpp"
+                                showLineNumbers={true}
+                            />
+                        </div>
+                        :
+                        <div className="projectThumbnail">
+                            {image}
+                        </div>)
+                    :<></>
                 }
-
             </div>
     )
 }

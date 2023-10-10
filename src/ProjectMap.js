@@ -2,6 +2,7 @@ import RayCloneCode from "./assets/code_blocks/ray_clone.js"
 
 const Projects = [
     {
+        "id": "ray-clone",
         "title": "Ray Clone",
         "desc": "A distributed runtime for parallelizing C++ jobs based on Anyscale's Ray Core open source library.",
         "tags": ["C++", "Distributed Computing"],
@@ -9,8 +10,10 @@ const Projects = [
         "hasCodeBlock": true,
         "img": "",
         "codeBlockText": RayCloneCode,
+        "content": "content",
     },
     {
+        "id": "bao",
         "title": "Bao",
         "desc": "A javascript package manager developed in C++",
         "tags": ["C++"],
