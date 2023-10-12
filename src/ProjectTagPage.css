@@ -1,6 +1,7 @@
 .project_tag_page_container{
 	transition: all var(--transition-speed) ease 0s;
     background: var(--bg-color);
+    min-height: 78vh;
     height:100%;
     width:100%;
     display:flex;
@@ -8,6 +9,59 @@
     align-items:center;
 }
 
+.title{
+    font-size: 6rem;
+    padding-top: 15vh;
+    animation: 0.3s 0.1s bringUpFadeTag;
+    animation-fill-mode: forwards;
+    opacity: 0%;
+}
+
+.filter{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}
+
+.filterTitle{
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-color)
+}
+
 .tagged_projects{
-    padding-top: 20vh;
+    animation: 0.3s 0.2s bringUpFadeTag;
+    animation-fill-mode: forwards;
+    opacity: 0%;
+}
+
+.projectTagHR{
+	transition: all 0.3s ease 0s;
+    width:50vw;
+    margin: 0 auto;
+    border:0;
+    height: 0.01rem;
+    background:var(--text-color);
+    animation: 0.3s 0.15s bringUpFadeTag;
+    animation-fill-mode: forwards;
+    opacity: 0%;
+}
+
+.tagSelect{
+	transition: all 0.3s ease 0s;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.8rem;
+    color: var(--text-color);
+    padding-bottom: 1.5rem;
+}
+
+@keyframes bringUpFadeTag{
+	from{
+		opacity: 0%;
+		transform: translateY(20px);
+	}
+	to{
+		opacity: 100%;
+		transform: translateY(0px);
+	}
 }

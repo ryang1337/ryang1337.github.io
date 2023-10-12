@@ -25,6 +25,9 @@
     font-weight: 700;
     text-align:center;
     padding-top:20vh;
+    animation: 0.3s 0.1s bringUpFadeTag;
+    animation-fill-mode: forwards;
+    opacity: 0%;
 }
 
 .project_tags{
@@ -36,6 +39,9 @@
     font-size: 0.8rem;
     padding-top: 2rem;
     white-space: nowrap;
+    animation: 0.3s 0.2s bringUpFadeTag;
+    animation-fill-mode: forwards;
+    opacity: 0%;
 }
 
 .project_content{
@@ -51,8 +57,14 @@
 .project_timeline{
     font-size: 0.8rem;
     padding-top: 0.6rem;
+    animation: 0.3s 0.2s bringUpFadeTag;
+    animation-fill-mode: forwards;
+    opacity: 0%;
 }
 
 .projectThumbnail{
     width: 50vw;
+    animation: 0.3s 0.3s bringUpFadeTag;
+    animation-fill-mode: forwards;
+    opacity: 0%;
 }

@@ -4,8 +4,8 @@ import ProjectCard from './ProjectCard.js'
 
 const FeaturedProjects = () => {
     const featured = ["ray-clone"]
-    const featured_projects = featured.map((title) => {
-        return <ProjectCard title={title} showThumbnail={true}/>
+    const featured_projects = featured.map((title, index) => {
+        return <ProjectCard title={title} showThumbnail={true} key={index}/>
     })
 
     return (

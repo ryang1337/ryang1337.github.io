@@ -22,3 +22,7 @@
     --project-card-highlight-color: #31363f;
     --project-card-outline-color: #646c7c;
 }
+
+body{
+    background-color: var(--bg-color);
+}

@@ -25,14 +25,16 @@ const Projects = [
 
 const ProjectTagMap = {}
 const ProjectTitleMap = {}
+const ProjectTags = []
 
 Projects.forEach((project) => {
     project["tags"].forEach((tag) => {
-        tag = tag.replace(/\s/g,'-').toLowerCase()
-        if(tag in ProjectTagMap){
-            ProjectTagMap[tag].push(project)
+        const ptag = tag.replace(/\s/g,'-').toLowerCase()
+        if(ptag in ProjectTagMap){
+            ProjectTagMap[ptag].push(project)
         }else{
-            ProjectTagMap[tag] = [project]
+            ProjectTagMap[ptag] = [project]
+            ProjectTags.push(tag)
         }
     })
 
@@ -42,3 +44,4 @@ Projects.forEach((project) => {
 export { ProjectTagMap }
 export { ProjectTitleMap }
 export { Projects }
+export { ProjectTags }
