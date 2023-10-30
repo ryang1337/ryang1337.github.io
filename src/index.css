@@ -9,12 +9,19 @@
     --project-card-highlight-color: #f5f5f5;
     --project-card-outline-color: #ebebeb;
     --transition-speed: 0.3s;
+    --title-text: 300px;
+    --header-text: 150px;
+    --subheader-text: 50px;
+    --content-text: 40px;
+    --subcontent-text: 25px;
+    --code-text: 20px;
 }
 
 .dark-mode{
     --bg-color: #282c34;
     --text-color: #ffffff;
-    --text-highlight-color: #182425;
+    /* --text-highlight-color: #182425; */
+    --text-highlight-color: #121417;
     --switch-color: #496B6F;
     --header-color: #282c34;
     --header-line-color: rgba(150, 150, 150, 0.5);
@@ -24,5 +31,6 @@
 }
 
 body{
+	transition: all var(--transition-speed) ease 0s;
     background-color: var(--bg-color);
 }

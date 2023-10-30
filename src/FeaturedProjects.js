@@ -10,7 +10,7 @@ const FeaturedProjects = () => {
 
     return (
         <div>
-            <div className="title">
+            <div className="featured_projects_title">
                 Featured Projects
             </div>
             <hr className="projectHR"></hr>

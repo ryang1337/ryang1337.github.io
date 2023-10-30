@@ -33,7 +33,7 @@ function navbarVis(){
 		nb.classList.add("notNavTop");
     	nb.style.top = "0";
 	} else {
-    	nb.style.top = "-120px";
+    	nb.style.top = "-200px";
 	}
 	prevScrollPos = currScrollPos;
 }

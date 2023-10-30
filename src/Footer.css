@@ -1,8 +1,10 @@
 footer{
+	width:100%;
 	background:var(--bg-color);
 	scroll-snap-align: start;
 	transition: all var(--transition-speed) ease 0s;
 	padding-top: 3rem;
+	max-width:2560px;
 }
 
 #footer_icons{
@@ -15,7 +17,7 @@ footer{
 #footer_text{
 	transition: all var(--transition-speed) ease 0s;
 	font-family: "Poppins", sans-serif;
-	font-size: 12px;
+	font-size: var(--subcontent-text);
 	color: var(--text-color);
 	display:flex;
 	align-content: center;

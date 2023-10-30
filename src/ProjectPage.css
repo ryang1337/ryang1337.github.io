@@ -21,7 +21,7 @@
 }
 
 .project_title{
-    font-size: 6rem;
+    font-size: var(--header-text);
     font-weight: 700;
     text-align:center;
     padding-top:20vh;
@@ -36,7 +36,7 @@
     justify-content: center;
     flex-wrap: wrap;
     width: 30vw;
-    font-size: 0.8rem;
+    font-size: var(--subcontent-text);
     padding-top: 2rem;
     white-space: nowrap;
     animation: 0.3s 0.2s bringUpFadeTag;
@@ -45,7 +45,9 @@
 }
 
 .project_content{
+	transition: all var(--transition-speed) ease 0s;
     font-family: "Poppins", sans-serif;
+    font-size: var(--subcontent-text);
     color: var(--text-color);
     padding-top: 3rem;
 }
@@ -55,7 +57,7 @@
 }
 
 .project_timeline{
-    font-size: 0.8rem;
+    font-size: var(--subcontent-text);
     padding-top: 0.6rem;
     animation: 0.3s 0.2s bringUpFadeTag;
     animation-fill-mode: forwards;

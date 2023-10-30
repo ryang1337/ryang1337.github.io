@@ -4,14 +4,20 @@
     min-height: 78vh;
     height:100%;
     width:100%;
+    min-height:85vh;
     display:flex;
     flex-direction:column;
     align-items:center;
 }
 
-.title{
-    font-size: 6rem;
+.project_tag_page_title{
+	transition: all var(--transition-speed) ease 0s;
+    font-size: var(--header-text);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: var(--text-color);
     padding-top: 15vh;
+    padding-bottom: 80px;
     animation: 0.3s 0.1s bringUpFadeTag;
     animation-fill-mode: forwards;
     opacity: 0%;
@@ -21,6 +27,7 @@
     display: flex;
     flex-direction: column;
     align-items:center;
+    margin-top: 1rem;
 }
 
 .filterTitle{
@@ -36,7 +43,7 @@
 }
 
 .projectTagHR{
-	transition: all 0.3s ease 0s;
+	transition: all var(--transition-speed) ease 0s;
     width:50vw;
     margin: 0 auto;
     border:0;
@@ -48,11 +55,93 @@
 }
 
 .tagSelect{
-	transition: all 0.3s ease 0s;
+    animation: 0.3s 0.15s bringUpFadeTag;
+    animation-fill-mode: forwards;
+    opacity: 0%;
     font-family: 'Poppins', sans-serif;
-    font-size: 0.8rem;
+    font-size: var(--subcontent-text);
     color: var(--text-color);
-    padding-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding: 8px;
+    width: 15vw!important;
+}
+
+.p-multiselect-items{
+    font-family: 'Poppins', sans-serif;
+    font-size: var(--subcontent-text);
+    color: var(--text-color);
+    padding-top: 3px;
+}
+
+.p-checkbox-box{
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--text-color);
+    border-radius: 5px;
+    padding: 2px;
+    margin: 10px;
+}
+
+.p-checkbox-icon path{
+	transition: all var(--transition-speed) ease 0s;
+    fill: var(--text-color)
+}
+
+.p-multiselect-item{
+    padding: 3px;
+}
+
+.p-multiselect-token{
+	transition: all var(--transition-speed) ease 0s;
+    background-color: var(--text-highlight-color);
+    padding: 0px 10px;
+    border-radius: 20px;
+}
+
+.p-placeholder{
+	transition: all var(--transition-speed) ease 0s;
+}
+
+.p-multiselect-trigger-icon{
+	transition: all var(--transition-speed) ease 0s;
+}
+
+.p-multiselect-token-icon{
+    width: 18px;
+    height: 18px;
+}
+
+.p-multiselect-token-label{
+    padding-right: 6px;
+}
+
+.p-multiselect{
+	transition: border var(--transition-speed) ease 0s;
+    border: 1px solid var(--text-color);
+    border-radius: 5px;
+}
+
+.p-multiselect-panel{
+    background-color: var(--bg-color);
+    box-shadow: 0px 8px 24px 2px var(--text-highlight-color);
+    border-radius: 5px;
+}
+
+.p-multiselect-header{
+    background-color: var(--text-highlight-color);
+    border-radius: 6px 6px 0px 0px;
+    border-bottom: 1px solid var(--switch-color);
+    padding: 5px;
+    padding-left: 3px;
+}
+
+.p-multiselect-close-icon{
+    width: 1vw;
+    margin: 5px;
+}
+
+.p-multiselect-close-icon path{
+    fill: var(--text-color);
 }
 
 @keyframes bringUpFadeTag{

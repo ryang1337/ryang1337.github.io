@@ -1,12 +1,12 @@
 /* The browser window */
 .container {
-    border: 0.2rem solid var(--text-highlight-color);
-    border-radius: 0.5rem;
+    border: 8px solid var(--text-highlight-color);
+    border-radius: 16px;
 }
   
   /* Container for columns and the top "toolbar" */
 .row {
-    padding: 0.1rem;
+    padding: 5px;
     padding-left:0.3rem;
     background: var(--text-highlight-color);
 }
@@ -24,9 +24,9 @@
   
   /* Three dots */
 .dot {
-    margin-right: 0.25rem;
-    height: 0.5rem;
-    width: 0.5rem;
+    margin-right: 0.25vw;
+    height: 0.6vw;
+    width: 0.6vw;
     border-radius: 50%;
     display: inline-block;
 }
@@ -45,8 +45,8 @@
 
 .codeBlock{
     font-family: "Fira Code";
-    font-size:0.6rem;
+    font-size: var(--code-text);
     background: var(--text-highlight-color);
-    border:0.1rem solid var(--text-highlight-color);
-    border-radius: 0.5rem;
+    border: 2px solid var(--text-highlight-color);
+    border-radius: 8px;
 }

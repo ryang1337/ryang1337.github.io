@@ -60,7 +60,7 @@ const ProjectTagPage = () => {
 
     return (
         <div className="project_tag_page_container">
-            <div className="title">
+            <div className="project_tag_page_title">
                 Projects
             </div>
             <div className="filter">
@@ -76,9 +76,7 @@ const ProjectTagPage = () => {
                             navigate(location.pathname)
                             return
                         }
-                        console.log(e.value)
                         const newTags = encodeURIComponent(e.value.filter(tag => tag != '').join(','))
-                        console.log(newTags)
                         navigate(location.pathname + "?tags=" + newTags)
                     }}
                 />

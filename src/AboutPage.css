@@ -1,0 +1,74 @@
+.about_page{
+    transition: all var(--transition-speed) 0s ease;
+    background-color: var(--bg-color);
+    width:100%;
+    display:flex;
+    justify-content: center;
+}
+
+.about_page_container{
+    transition: all var(--transition-speed) 0s ease;
+    background-color: var(--bg-color);
+    padding-top: 20vh;
+    display:flex;
+    flex-direction: row;
+    max-width: 1700px;
+    width: 80vw;
+    justify-content: space-between;
+    min-height: 85vh;
+    height: 100%;
+}
+
+.about_page_text{
+    transition: all var(--transition-speed) 0s ease;
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-color);
+    width: 50%;
+}
+
+.about_page_text a{
+    transition: all var(--transition-speed) 0s ease;
+    text-decoration: underline;
+}
+
+.about_page_text a:link{
+    color: var(--text-color);
+}
+
+.about_page_text a:visited{
+    color: var(--text-color);
+}
+
+.about_page_title{
+    font-size: 100px;
+    font-weight: 700;
+    animation: 0.3s 0.1s bringUpFadeTag;
+    animation-fill-mode: forwards;
+    opacity: 0%;
+}
+
+.about_page_subtitle{
+    font-size: 50px;
+    padding-bottom: 20px;
+    animation: 0.3s 0.15s bringUpFadeTag;
+    animation-fill-mode: forwards;
+    opacity: 0%;
+}
+
+.about_page_p{
+    font-size: 20px;
+    animation: 0.3s 0.2s bringUpFadeTag;
+    animation-fill-mode: forwards;
+    opacity: 0%;
+}
+
+.about_page_image{
+    display:flex;
+    padding-top:8vh;
+}
+
+.portfolio_image{
+    border-radius: 500px;
+    width: 500px;
+    height: 500px;
+}
