@@ -8,9 +8,9 @@ Specifically, I'm passionate about applying distributed computing to make machin
 learning even better. Projects like Anyscale's Ray and Apache Spark really tickle my brain.
 \n &nbsp;
 
-Currently, I'm a founding engineer at **[Poly](https://www.withpoly.com)**, where I am building
-out our **ML Infrastructure**. We are pioneering the future of design and giving designers the tools
-to be even better at what they do.
+Currently, I'm looking for opportunities in software infrastructure work while expanding my technical skillset.
+My most recent endeavor has been building a simplified clone of the Ray Core library, and I'm now
+tackling the problem of creating a cloud file system, similar to Google Drive.
 \n &nbsp;
 
 Outside work, I enjoy crafting new recipes for my future café, losing every game of
