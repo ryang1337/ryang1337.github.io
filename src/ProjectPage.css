@@ -21,7 +21,7 @@
 }
 
 .project_title{
-    font-size: var(--header-text);
+    font-size: var(--heading-text);
     font-weight: 700;
     text-align:center;
     padding-top:20vh;
@@ -64,7 +64,7 @@
     opacity: 0%;
 }
 
-.projectThumbnail{
+.project_page_thumbnail{
     width: 50vw;
     animation: 0.3s 0.3s bringUpFadeTag;
     animation-fill-mode: forwards;

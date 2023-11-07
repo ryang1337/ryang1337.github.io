@@ -1,7 +1,8 @@
 /* The browser window */
-.container {
+.code_block_container {
     border: 8px solid var(--text-highlight-color);
     border-radius: 16px;
+    width:100%;
 }
   
   /* Container for columns and the top "toolbar" */
@@ -41,12 +42,4 @@
 
 .d3{
     background-color: #5ac05a;
-}
-
-.codeBlock{
-    font-family: "Fira Code";
-    font-size: var(--code-text);
-    background: var(--text-highlight-color);
-    border: 2px solid var(--text-highlight-color);
-    border-radius: 8px;
 }

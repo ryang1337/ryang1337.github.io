@@ -9,7 +9,7 @@ const FeaturedProjects = () => {
     })
 
     return (
-        <div>
+        <div className="featured_projects_container">
             <div className="featured_projects_title">
                 Featured Projects
             </div>

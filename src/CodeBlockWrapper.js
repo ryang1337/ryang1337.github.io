@@ -7,7 +7,7 @@ const CodeBlockWrapper = ({ text, language, showLineNumbers }) => {
     const darkMode = useSelector((state) => state.darkMode.value)
 
     return (
-        <div className="container">
+        <div className="code_block_container">
             <div className="row">
                 <div className="left">
                     <span className="dot d1"></span>
@@ -16,14 +16,12 @@ const CodeBlockWrapper = ({ text, language, showLineNumbers }) => {
                 </div>
             </div>
 
-            <div className="codeBlock">
-                <CodeBlock
-                    text={text}
-                    language={language}
-                    showLineNumbers={showLineNumbers}
-                    theme={darkMode ? atomOneDark : a11yLight}
-                />
-            </div>
+            <CodeBlock
+                text={text}
+                language={language}
+                showLineNumbers={showLineNumbers}
+                theme={darkMode ? atomOneDark : a11yLight}
+            />
         </div>
     )
 }

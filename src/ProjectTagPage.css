@@ -8,11 +8,12 @@
     display:flex;
     flex-direction:column;
     align-items:center;
+    width: 60vw;
 }
 
 .project_tag_page_title{
 	transition: all var(--transition-speed) ease 0s;
-    font-size: var(--header-text);
+    font-size: var(--heading-text);
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
     color: var(--text-color);
@@ -44,7 +45,7 @@
 
 .projectTagHR{
 	transition: all var(--transition-speed) ease 0s;
-    width:50vw;
+    width:60vw;
     margin: 0 auto;
     border:0;
     height: 0.01rem;
@@ -153,4 +154,14 @@
 		opacity: 100%;
 		transform: translateY(0px);
 	}
+}
+
+@media(max-width: 1600px){
+    .project_tag_page_container{
+        width: calc(48vw + 192px);
+    }
+    
+    .projectTagHR{
+        width: calc(48vw + 192px);
+    }
 }

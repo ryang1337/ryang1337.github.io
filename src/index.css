@@ -10,11 +10,47 @@
     --project-card-outline-color: #ebebeb;
     --transition-speed: 0.3s;
     --title-text: 300px;
-    --header-text: 150px;
-    --subheader-text: 50px;
+    --subtitle-text: 40px;
+    --header-text: 40px;
+    --heading-text: 150px;
+    --subheading-text: 50px;
     --content-text: 40px;
     --subcontent-text: 25px;
     --code-text: 20px;
+}
+
+@media (max-width: 2400px){
+    :root{
+        --title-text: 12.5vw;
+        --heading-text: 6.25vw;
+    }
+}
+
+@media (max-width: 2000px){
+    :root{
+        --subtitle-text: 2vw;
+    }
+}
+
+@media (max-width: 1600px){
+    :root{
+        --header-text: 2.5vw;
+        --subcontent-text: 1.5625vw;
+        --subheading-text: 3.125vw;
+        --code-text: 1.25vw;
+    }
+}
+
+@media (max-width: 1500px){
+    :root{
+        --subtitle-text: 30px;
+    }
+}
+
+@media (max-width:1200px){
+    :root{
+        --subtitle-text: 2.5vw;
+    }
 }
 
 .dark-mode{

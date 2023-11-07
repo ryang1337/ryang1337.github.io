@@ -48,7 +48,7 @@ const ProjectPage = () => {
             </div>
             {
                 hasCodeBlock ? 
-                <div className="projectThumbnail codeBlock">
+                <div className="project_page_thumbnail codeBlock">
                     <CodeBlockWrapper
                         text={codeBlockText}
                         language="cpp"
@@ -57,7 +57,7 @@ const ProjectPage = () => {
                     />
                 </div>
                 :
-                <div className="projectThumbnail">
+                <div className="project_page_thumbnail">
                     { image }
                 </div>
             }

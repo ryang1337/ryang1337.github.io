@@ -12,6 +12,7 @@
 }
 
 .clickableCard{
+    width:100%;
 	transition: all var(--transition-speed) ease 0s;
     text-decoration:none;
     cursor:pointer;
@@ -39,6 +40,7 @@
     flex-direction:column;
     align-items: center;
     padding-top: 2rem;
+    width:100%;
 }
 
 .projectCard{
@@ -49,8 +51,6 @@
 	font-weight: 500;
 	font-style: normal;
     justify-content: space-between;
-    width:50vw;
-    max-width: 1280px;
 }
 
 .projectCardTitle{
@@ -68,7 +68,7 @@
 }
 
 .cardTitle{
-    font-size: var(--subheader-text);
+    font-size: var(--subheading-text);
 }
 
 .outLink{
@@ -101,8 +101,14 @@
 }
 
 .projectThumbnail{
-	justify-content: center;
     margin-top: 1.5rem;
-    width: 50vw;
-    max-width: 1280px;
+    width:100%;
+}
+
+.codeBlock{
+    font-family: "Fira Code";
+    font-size: var(--code-text);
+    background: var(--text-highlight-color);
+    border: 2px solid var(--text-highlight-color);
+    border-radius: 8px;
 }
