@@ -50,6 +50,11 @@
     font-size: var(--subcontent-text);
     color: var(--text-color);
     padding-top: 3rem;
+    width: 80vw;
+}
+
+.project_content a{
+    color: inherit;
 }
 
 .tagItem:hover{

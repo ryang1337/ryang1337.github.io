@@ -1,4 +1,5 @@
 import RayCloneCode from "./assets/code_blocks/ray_clone.js"
+import { content as ray_clone_content } from "./assets/project_content/ray_clone.js"
 
 const Projects = [
     {
@@ -6,20 +7,21 @@ const Projects = [
         "title": "Ray Clone",
         "desc": "A distributed runtime for parallelizing C++ jobs based on Anyscale's Ray Core open source library.",
         "tags": ["C++", "Distributed Computing"],
-        "timeline": "July 2023 - Present",
+        "timeline": "July 2023 - Oct 2023",
         "hasCodeBlock": true,
         "img": "",
         "codeBlockText": RayCloneCode,
-        "content": "content",
+        "content": ray_clone_content,
     },
     {
-        "id": "bao",
-        "title": "Bao",
-        "desc": "A javascript package manager developed in C++",
-        "tags": ["C++"],
-        "timeline": "Oct 2023 - Present",
-        "hasCodeBlock": true,
+        "id": "drive-clone",
+        "title": "Drive Clone",
+        "desc": "A cloud file storage system with integrated file conversions and smart search.",
+        "tags": ["React"],
+        "timeline": "Nov 2023 - Present",
+        "hasCodeBlock": false,
         "img": "",
+        "content": "Currently in the process of building out the system. End product will have support for in-app file conversions and smart search using RAG."
     }
 ]
 

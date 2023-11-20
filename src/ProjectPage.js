@@ -6,6 +6,7 @@ import Tags from './Tags.js'
 import { useSelector, useDispatch } from 'react-redux'
 import { setFrom } from './fromSlice'
 import { useEffect } from 'react'
+import Markdown from 'react-markdown'
 
 export const loader = ({ params }) => {
     const project = ProjectTitleMap[params.projectTitle]
@@ -61,9 +62,9 @@ const ProjectPage = () => {
                     { image }
                 </div>
             }
-            <div className="project_content">
+            <Markdown className="project_content">
                 { content }
-            </div>
+            </Markdown>
         </div>
     )
 }
