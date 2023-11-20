@@ -19,7 +19,7 @@ const Footer = () => {
 							</a>
 						</li>
 						<li className="icon">
-							<a href="mailto:email@example.com" className="icon_link">
+							<a href="mailto:richard.ruoyu.yang@gmail.com" className="icon_link">
 								<Envelope />
 							</a>
 						</li>
